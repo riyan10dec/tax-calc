@@ -1,0 +1,4 @@
+type Tax {
+    id: Int!
+    code: Int!
+}

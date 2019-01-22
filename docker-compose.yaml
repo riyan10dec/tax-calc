@@ -1,0 +1,23 @@
+version: '2'
+
+volumes:
+  data-volume: {}
+services: 
+  docker-mysql:
+    image: mysql:5.7
+    ports:
+        - "33061:3306"
+    volumes:
+      - data-volume:/var/lib/mysql:rw,delegated
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+        - MYSQL_ROOT_PASSWORD=P@ssw0rd
+        - MYSQL_DATABASE=tax-calc
+        - MYSQL_ROOT_HOST=%
+
+  go-api:
+    build: .
+    depends_on:
+      - docker-mysql
+    ports:
+      - 8080:8080

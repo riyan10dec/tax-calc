@@ -1,0 +1,6 @@
+[database]
+host = "docker-mysql"
+port = "3306"
+user = "root"
+password = "P@ssw0rd"
+name = "tax-calc"

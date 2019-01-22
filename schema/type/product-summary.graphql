@@ -1,0 +1,6 @@
+type ProductSummary {
+    priceSubTotal: Float!
+    taxSubTotal: Float!
+    grandTotal: Float!
+    products: [Product]
+}

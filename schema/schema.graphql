@@ -1,0 +1,12 @@
+type Query {
+    
+}
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Mutation {
+    calculateTax(productIDs: [Int!]!): ProductSummary
+    inputProduct(product: ProductInput!): Product
+}

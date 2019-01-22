@@ -1,0 +1,11 @@
+type Product {
+    id: Int!
+    name: String!
+    price: Float!
+    taxCode: Int!
+    refundable: Boolean!
+    taxPrice: Float!
+    price: Float!
+    productType: String!
+    total: Float!
+}
